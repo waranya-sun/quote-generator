@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300;400;500&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Azeret Mono', monospace;
+    line-height: 1.7;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    height: 100vh;
+    justify-items: center;
+}
+
+#subContainer{
+    text-align: center;
+    animation: fadeIn 0.2s;
+}
+
+#showImg{
+    width: 110px;
+}
+
+#showQuote{
+    padding: 20px 0 15px 0;
+}
+
+.longQuote{
+    font-size: 14px;
+}
+
+#showAuthor{
+    padding: 0 0 18px 0;
+    font-size: 13px;
+}
+
+#showButtons{
+    display: flex;
+    justify-content: space-between; 
+}
+
+button {
+    padding: 4px;
+    font-family: 'Azeret Mono', monospace;
+    border-radius: 4px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(201, 201, 201);
+}
+
+.loader{
+    border: 10px solid rgb(219, 219, 219);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border-top: 10px solid rgb(175, 175, 175);
+    animation: spin 2s linear infinite;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+ } 
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform : rotate(360deg);}
+}
+
+@media screen and (max-width: 768px){
+    #container{
+        grid-template-columns: 20% 1fr 20%;
+    }
+}
